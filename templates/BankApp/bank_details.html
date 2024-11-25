@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{%extends "BankApp/parent.html"%}
+<html lang="en" dir="ltr">
+ <head>
+ </head>
+ <body>
+ {%block for_child%}
+ <h1 style="color:blue"><u>bank details</u></h1>
+ <h2>name:{{b.name}}</h2><br>
+ <h2>branch:{{b.branch}}</h2><br>
+ <h2>location:{{b.location}}</h2><br>
+ <h2>ifsc:{{b.ifsc}}</h2><br>
+ <h2>No.of Customers:{{b.noOfCustomers}}</h2><br>
+ <h2>TurnOver:{{b.turnOver}}</h2>
+ <a href="/update/{{b.id}}" class="btn btn-warning">
+ Update</a> &nbsp
+ <a href="/delete/{{b.id}}" class="btn btn-danger">
+ delete</a> &nbsp
+ {%endblock%}
+ </body>
+</html>

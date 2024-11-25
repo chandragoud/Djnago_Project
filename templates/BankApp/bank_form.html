@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{%extends "BankApp/parent.html"%}
+ <html lang="en" dir="ltr">
+ <head>
+ </head>
+ <body>
+ {%block for_child%}
+ <form method="post">
+ <h1 style="color:red">Fill Up The Details</h1>
+ {{form.as_p}}
+ {% csrf_token%}
+ <input type="submit"
+ class="btn btn-primary btn-lg" name="submit"
+value="submit">
+ </form>
+ {%endblock%}
+ </body>
+</html>
+templates/bankApp/

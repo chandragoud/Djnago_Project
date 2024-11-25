@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% extends "BankApp/parent.html" %}
+<html lang="en" dir="ltr">
+ <head>
+</head>
+ <body>
+ {%block for_child%}
+ <h1 style="color:red">updation form</h1>
+<form method='post'>
+ name:<input type="text" name="name"
+value="{{bank.name}}"><br> <br>
+ branch:<input type="text" name="branch"
+value="{{bank.branch}}"><br> <br>
+ location:<input type="text" name="location"
+value="{{bank.location}}"><br> <br>
+ IFSC:<input type="text" name="ifsc"
+value="{{bank.ifsc}}"><br> <br>
+ total customers:<input type="text"
+name="noOfCustomers"
+value="{{bank.noOfCustomers}}"><br> <br>
+ turnOver:<input type="text" name="turnOver"
+value="{{bank.turnOver}}"> <br> <br>
+<input type="submit" name="submit" value="submit"
+class="btn btn-success">
+ {%csrf_token%}
+ </form>
+ {%endblock%}
+</body>
+</html>
